@@ -1,0 +1,184 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --white: #fff;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+html {
+  background: url(../images/bg-mobile.svg) var(--violet) no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  color: var(--white);
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 2.188em;
+}
+
+.main > .container,
+.footer__list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Header */
+
+.header {
+  margin-top: 2.188em;
+}
+
+.header__logo {
+  width: 7.813rem;
+}
+
+/* Main */
+
+.main > .container {
+  align-items: center;
+  flex-direction: column;
+}
+
+.main__image img,
+.main__text {
+  margin: 0 auto;
+  max-width: 37.5rem;
+}
+
+.main__image {
+  margin: 3.125em 0;
+}
+
+.main__title {
+  font-size: 1.625rem;
+}
+
+.main__desc {
+  margin: 1em 0;
+}
+
+.main__button {
+  cursor: pointer;
+  color: var(--violet);
+  padding: 0.8em 0;
+  margin: 1em 0;
+  width: 12.5rem;
+  border-radius: 20px;
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.2);
+}
+
+.main__button:hover {
+  color: var(--white);
+  background-color: var(--soft-magenta);
+}
+
+/* Footer */
+
+.footer {
+  padding: 2.5em 2.188em;
+}
+
+.footer__icon:not(:last-child) {
+  margin-right: 0.938rem;
+}
+
+.footer__icon a {
+  display: inline-block;
+  color: var(--white);
+  border: 1px solid var(--white);
+  font-size: 0.875rem;
+  width: 1.875rem;
+  border-radius: 50%;
+  padding: 0.313em;
+}
+
+.footer__icon a:hover {
+  background-color: var(--soft-magenta);
+}
+
+@media screen and (min-width: 770px) {
+  html {
+    background: url(../images/bg-desktop.svg) var(--violet) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .main > .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.625em;
+  }
+
+  .main__image img,
+  .main__text {
+    margin: initial;
+  }
+
+  .main__image {
+    min-width: 450px;
+  }
+
+  .main__image img {
+    max-width: 43.75rem;
+  }
+
+  .main__text {
+    padding: 0 2.188em;
+    text-align: left;
+    max-width: 550px;
+  }
+
+  .main__title {
+    font-size: 2.5rem;
+  }
+
+  .main__button {
+    width: 9.375rem;
+  }
+
+  .footer {
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  .footer__list {
+    justify-content: flex-end;
+  }
+}
