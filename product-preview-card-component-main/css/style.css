@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body,
+.card,
+.card__price {
+  display: flex;
+}
+
+.card__subtitle,
+.card__desc,
+.card__price--old-price {
+  font-size: 0.875rem;
+}
+
+.card__subtitle,
+.card__title {
+  color: var(--very-dark-blue);
+}
+
+.card__title,
+.card__price--discount {
+  font-family: "Fraunces", sans-serif;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  background: var(--cream);
+  padding: 0 0.938em;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  max-width: 25rem;
+  flex-direction: column;
+}
+
+.card__image {
+  height: 18.75rem;
+  background: url(../images/image-product-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card__content {
+  padding: 1.563em;
+}
+
+.card__subtitle {
+  font-weight: normal;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.card__title {
+  margin: 0.625rem 0;
+  font-size: 2.125rem;
+}
+
+.card__desc {
+  line-height: 1.438rem;
+  color: var(--dark-grayish-blue);
+}
+
+.card__price {
+  margin: 1.25em 0;
+  align-items: center;
+}
+
+.card__price--discount {
+  font-size: 2.125rem;
+  padding-right: 0.625em;
+  color: var(--dark-cyan);
+}
+
+.card__price--old-price {
+  color: var(--very-dark-blue);
+}
+
+.card__cart-btn {
+  width: 100%;
+  padding: 1.25em 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--dark-cyan);
+  cursor: pointer;
+}
+
+.card__cart-btn .fa-cart-shopping {
+  margin-right: 0.625em;
+}
+
+.card__cart-btn:hover {
+  background: var(--very-dark-blue);
+}
+
+@media screen and (min-width: 620px) {
+  .card {
+    flex-direction: row;
+    max-width: 37.5rem;
+    height: 28.125rem;
+  }
+
+  .card__content,
+  .card__image {
+    width: 50%;
+    height: 100%;
+  }
+
+  .card__image {
+    background: url(../images/image-product-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
